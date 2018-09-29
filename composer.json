@@ -1,6 +1,6 @@
 {
     "name": "envive/tenant-migrate",
-    "description": "laravel artisan command tool for multi-tenant pattern",
+    "description": "laravel migrate command tool for multi-tenant pattern",
     "license": "MIT",
     "authors": [
         {
