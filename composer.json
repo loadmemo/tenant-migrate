@@ -1,0 +1,25 @@
+{
+    "name": "envive/tenant-migrate",
+    "description": "laravel artisan command tool for multi-tenant pattern",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Magi",
+            "email": "mengliu@me.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Envive\\TenantMigrate\\":"src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers":[
+                "Envive\\TenantMigrate\\TenantMigrateServiceProvider"
+            ]
+        }
+    }
+}
