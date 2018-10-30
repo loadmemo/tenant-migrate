@@ -7,7 +7,7 @@ use Envive\TenantMigrate\Commands\TenantMigrateFresh;
 use Envive\TenantMigrate\Commands\TenantMigrateInstall;
 use Envive\TenantMigrate\Commands\TenantMigrateRefresh;
 use Envive\TenantMigrate\Commands\TenantMigrateReset;
-use Envive\TenantMigrate\Commands\TenantMigrateRollBack;
+use Envive\TenantMigrate\Commands\TenantMigrateRollback;
 use Envive\TenantMigrate\Commands\TenantMigrateStatus;
 use Illuminate\Support\ServiceProvider;
 
@@ -40,7 +40,7 @@ class TenantMigrateServiceProvider extends ServiceProvider
                 TenantMigrateInstall::class,
                 TenantMigrateRefresh::class,
                 TenantMigrateReset::class,
-                TenantMigrateRollBack::class,
+                TenantMigrateRollback::class,
                 TenantMigrateStatus::class,
             ]);
         }
