@@ -1,4 +1,5 @@
 <?php
+
 namespace Envive\TenantMigrate\Commands;
 
 use Config;
@@ -7,17 +8,17 @@ use Illuminate\Console\Command;
 
 class TenantBaseCommand extends Command
 {
-	protected $command;
-	 /* Create a new command instance.
-     *
-     * @return void
-     */
+    protected $command;
+
+    /* Create a new command instance.
+    *
+    * @return void
+    */
     public function __construct()
     {
         parent::__construct();
         Config::set('database.connections.tenant', config('tenant.connection'));
     }
-
 
     /**
      * Execute the console command.
@@ -27,7 +28,7 @@ class TenantBaseCommand extends Command
     public function handle()
     {
         $tenant = $this->argument('tenant');
-        if (config('tenant.tenant_prefix')){
+        if (config('tenant.tenant_prefix')) {
             $tenant = config('tenant.tenant_prefix').$tenant;
         }
         Config::set('database.connections.tenant.database', $tenant);
@@ -35,10 +36,11 @@ class TenantBaseCommand extends Command
         try {
             DB::connection('tenant')->getPdo();
         } catch (\Exception $e) {
-            $this->error("Tenant database does not exist!!!");
+            $this->error('Tenant database does not exist!!!');
+
             return;
         }
-        $arguments = collect($this->options())->map(function($value,$option){
+        $arguments = collect($this->options())->map(function ($value, $option) {
             return ['--'.$option => $value];
         })->collapse()->toArray();
         $arguments['--database'] = 'tenant';

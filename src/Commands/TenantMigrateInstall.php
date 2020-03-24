@@ -1,4 +1,5 @@
 <?php
+
 namespace Envive\TenantMigrate\Commands;
 
 class TenantMigrateInstall extends TenantBaseCommand
