@@ -2,18 +2,18 @@
 
 return [
     'connection' => [
-        'driver' => 'mysql',
-        'host' => env('DB_HOST', '127.0.0.1'),
-        'port' => env('DB_PORT', '3306'),
-        'database' => null, //Left database name empty !!!
-        'username' => env('DB_USERNAME', 'forge'),
-        'password' => env('DB_PASSWORD', ''),
+        'driver'      => 'mysql',
+        'host'        => env('DB_HOST', '127.0.0.1'),
+        'port'        => env('DB_PORT', '3306'),
+        'database'    => null, //Left database name empty !!!
+        'username'    => env('DB_USERNAME', 'forge'),
+        'password'    => env('DB_PASSWORD', ''),
         'unix_socket' => env('DB_SOCKET', ''),
-        'charset' => 'utf8mb4',
-        'collation' => 'utf8mb4_unicode_ci',
-        'prefix' => '',
-        'strict' => true,
-        'engine' => null,
+        'charset'     => 'utf8mb4',
+        'collation'   => 'utf8mb4_unicode_ci',
+        'prefix'      => '',
+        'strict'      => true,
+        'engine'      => null,
     ],
     'tenant_prefix' => null,
 ];

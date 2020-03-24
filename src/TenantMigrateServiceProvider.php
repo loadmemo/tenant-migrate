@@ -21,7 +21,7 @@ class TenantMigrateServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/config/tenant.php' => config_path('tenant.php'),
+            __DIR__.'/config/tenant.php' => config_path('tenant.php'),
         ]);
     }
 
